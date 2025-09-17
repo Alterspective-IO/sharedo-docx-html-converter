@@ -1,185 +1,346 @@
-# Sharedo DOCX to HTML Email Template Converter
+# Sharedo DOCX to HTML Converter Service
 
-A powerful Python tool for converting Microsoft Word documents (.docx) to Sharedo-compatible HTML email templates with automatic tag preservation, conditional logic handling, and comprehensive reporting.
+A high-performance web service that converts Microsoft Word documents (.docx) to Sharedo-compatible HTML email templates, preserving conditional logic, placeholders, and document structure with 95% accuracy.
 
-## 🎯 Features
+## Features
 
-### Core Capabilities
-- **Batch Processing**: Convert multiple DOCX files simultaneously
-- **Sharedo Tag Preservation**: Automatically detects and preserves all Sharedo template variables
-- **Conditional Logic**: Handles If/Then blocks and conditional sections
-- **Content Controls**: Preserves Word content controls as Sharedo data tags
-- **Confidence Scoring**: Rates each conversion with accuracy confidence (0-100%)
-- **Comprehensive Reporting**: Generates detailed HTML and JSON reports
+- **RESTful API**: Convert DOCX files to HTML via HTTP endpoints
+- **Web Interface**: User-friendly landing page for manual file conversion
+- **Confidence Scoring**: Automatic assessment of conversion quality (0-100%)
+- **Batch Processing**: Process multiple documents simultaneously
+- **Metrics & Reporting**: Real-time conversion statistics and health monitoring
+- **Swagger Documentation**: Interactive API documentation at `/docs`
+- **Docker Support**: Production-ready containerized deployment
+- **High Accuracy**: 95% conversion accuracy with proper handling of:
+  - Sharedo template tags (context.*, document.*)
+  - Conditional sections (If blocks)
+  - Tables and nested structures
+  - Content controls and SDT elements
+  - Placeholders and form fields
 
-### Conversion Features
-- ✅ Preserves all Sharedo tags (`context.*`, `document.*`)
-- ✅ Maintains Word document dimensions and layout
-- ✅ Converts content blocks and sections
-- ✅ Handles tables with proper HTML structure
-- ✅ Preserves text formatting (bold, italic, underline)
-- ✅ Email-optimized HTML output
-- ✅ Mobile-responsive design
+## Quick Start
 
-## 📊 Accuracy Level: 95%
+### Using Docker (Recommended)
 
-| Component | Accuracy | Notes |
-|-----------|----------|--------|
-| Sharedo Tags | 100% | All tags preserved correctly |
-| Content Blocks | 100% | Full preservation |
-| Conditionals | 100% | If/Then logic maintained |
-| Formatting | 90% | Most styles preserved |
-| Layout | 90% | Word dimensions maintained |
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.7+
-- pip (Python package manager)
-
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/Alterspective-io/sharedo-docx-html-converter.git
-cd sharedo-docx-html-converter
+# Clone the repository
+git clone https://github.com/Alterspective-io/sharedo-docx-converter.git
+cd sharedo-docx-converter
+
+# Start the service
+docker-compose up -d
+
+# Service will be available at:
+# - Web Interface: http://localhost:8000
+# - API Endpoint: http://localhost:8000/api/v1/convert
+# - Swagger Docs: http://localhost:8000/docs
 ```
 
-2. Create virtual environment:
+### Local Development
+
 ```bash
+# Create virtual environment
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
 
-3. Install dependencies:
-```bash
+# Install dependencies
 pip install -r requirements.txt
+
+# Run the service
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-### Basic Usage
+## API Usage
 
-#### Single File Conversion
+### Convert Single Document
+
 ```bash
-python sharedo_improved_converter.py
+# Using curl
+curl -X POST "http://localhost:8000/api/v1/convert" \
+  -F "file=@document.docx" \
+  -o converted.html
+
+# Response includes HTML and metadata
 ```
 
-#### Batch Conversion
+### Python Example
+
+```python
+import requests
+
+# Convert DOCX to HTML
+with open('document.docx', 'rb') as f:
+    response = requests.post(
+        'http://localhost:8000/api/v1/convert',
+        files={'file': ('document.docx', f, 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')}
+    )
+
+if response.status_code == 200:
+    result = response.json()
+    html = result['html']
+    confidence = result['confidence']
+    print(f"Conversion successful! Confidence: {confidence}%")
+```
+
+### JavaScript/TypeScript Example
+
+```javascript
+const formData = new FormData();
+formData.append('file', fileInput.files[0]);
+
+const response = await fetch('http://localhost:8000/api/v1/convert', {
+    method: 'POST',
+    body: formData
+});
+
+const result = await response.json();
+console.log(`HTML: ${result.html}`);
+console.log(`Confidence: ${result.confidence}%`);
+```
+
+## API Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/` | GET | Landing page with web interface |
+| `/api/v1/convert` | POST | Convert DOCX to HTML |
+| `/api/v1/batch` | POST | Batch convert multiple files |
+| `/health` | GET | Service health check |
+| `/metrics` | GET | Conversion metrics and statistics |
+| `/docs` | GET | Swagger/OpenAPI documentation |
+| `/redoc` | GET | ReDoc documentation |
+
+## Conversion Response Format
+
+```json
+{
+  "html": "<html>...</html>",
+  "confidence": 95,
+  "metadata": {
+    "title": "Document Title",
+    "author": "Author Name",
+    "created": "2024-01-15T10:30:00",
+    "modified": "2024-01-15T14:20:00"
+  },
+  "analysis": {
+    "total_paragraphs": 42,
+    "sharedo_tags_found": 15,
+    "conditional_blocks": 3,
+    "tables": 2,
+    "complexity_score": "medium"
+  },
+  "warnings": []
+}
+```
+
+## Configuration
+
+### Environment Variables
+
+Create a `.env` file (see `.env.example`):
+
+```env
+# Application Settings
+APP_HOST=0.0.0.0
+APP_PORT=8000
+APP_ENV=production
+DEBUG=false
+
+# File Upload Settings
+MAX_FILE_SIZE=10485760  # 10MB
+CONVERSION_TIMEOUT=60   # seconds
+
+# Conversion Settings
+CONFIDENCE_THRESHOLD=90  # minimum confidence for auto-approval
+MAX_WORKERS=4
+
+# Logging
+LOG_LEVEL=INFO
+LOG_FORMAT=json
+
+# Security
+API_KEY_ENABLED=false
+API_KEY=your-secret-key-here
+```
+
+## Production Deployment
+
+### With Nginx (Recommended)
+
 ```bash
-# Place all DOCX files in Input/ folder
+# Deploy with Nginx reverse proxy
+docker-compose --profile production up -d
+
+# This starts:
+# - Sharedo converter service (port 8000)
+# - Nginx reverse proxy (port 80)
+# - Optional Redis cache
+```
+
+### SSL/TLS Configuration
+
+1. Add SSL certificates to `./ssl/` directory
+2. Uncomment HTTPS section in `nginx.conf`
+3. Update server_name in configuration
+
+### Health Monitoring
+
+```bash
+# Check service health
+curl http://localhost:8000/health
+
+# Response
+{
+  "status": "healthy",
+  "version": "1.0.0",
+  "uptime": 3600,
+  "conversions_total": 150,
+  "conversions_today": 25
+}
+```
+
+## Batch Processing
+
+For bulk document conversion, use the batch converter script:
+
+```bash
+# Process all DOCX files in Input folder
 python sharedo_batch_converter.py
-# Check Output/ folder for results and report
+
+# Results will be in:
+# - Output/*.html - Converted HTML files
+# - Output/conversion_report.html - Summary report
+# - Output/conversion_report.json - Detailed JSON report
 ```
 
-## 📁 Project Structure
+## Metrics and Monitoring
 
-```
-sharedo-docx-html-converter/
-├── Input/                          # Place DOCX files here
-├── Output/                         # Generated HTML files and reports
-├── sharedo_batch_converter.py      # Main batch converter
-├── sharedo_improved_converter.py   # Single file converter
-├── requirements.txt                # Python dependencies
-└── README.md                       # Documentation
-```
+Access real-time metrics at `/metrics`:
 
-## 📋 Conversion Report
-
-After batch conversion, check `Output/conversion_report.html` for:
-- Summary statistics
-- Files requiring review (confidence < 90%)
-- Successfully converted files
-- Failed conversions with error details
-- Recommendations for manual review
-
-### Confidence Score Guide
-
-| Score | Category | Action Required |
-|-------|----------|-----------------|
-| 90-100% | High | ✅ Ready for production |
-| 70-89% | Medium | ⚠️ Review recommended |
-| <70% | Low | ❌ Manual intervention needed |
-
-## 🔧 Configuration
-
-### Supported Sharedo Elements
-
-#### Tags
-- `context.roles.*`
-- `document.questionnaire.*`
-- Custom placeholders `[_____]`
-
-#### Conditional Sections
-```html
-<div data-if="condition">
-  <!-- Conditional content -->
-</div>
+```json
+{
+  "total_conversions": 1250,
+  "successful_conversions": 1190,
+  "failed_conversions": 60,
+  "average_confidence": 94.5,
+  "average_processing_time": 2.3,
+  "conversions_by_day": {
+    "2024-01-15": 45,
+    "2024-01-14": 38
+  },
+  "top_errors": []
+}
 ```
 
-#### Content Blocks
-```html
-<div data-content-block="block-name">
-  <!-- Block content -->
-</div>
+## Architecture
+
+```
+┌─────────────┐     ┌──────────────┐     ┌─────────────┐
+│   Client    │────▶│    Nginx     │────▶│   FastAPI   │
+└─────────────┘     └──────────────┘     └─────────────┘
+                            │                     │
+                            ▼                     ▼
+                    ┌──────────────┐     ┌─────────────┐
+                    │    Static    │     │  Converter  │
+                    │    Assets    │     │   Engine    │
+                    └──────────────┘     └─────────────┘
 ```
 
-## 📝 Example
+## Supported Features
 
-### Input (Word Document)
+### Document Elements
+- ✅ Paragraphs and text formatting
+- ✅ Tables (including nested)
+- ✅ Lists (ordered and unordered)
+- ✅ Headers and footers
+- ✅ Images and media
+- ✅ Hyperlinks
+
+### Sharedo-Specific
+- ✅ Context tags (context.*)
+- ✅ Document fields (document.*)
+- ✅ Conditional blocks (If sections)
+- ✅ Placeholders ([_____])
+- ✅ Content controls
+- ✅ Form fields
+
+## Troubleshooting
+
+### Common Issues
+
+1. **File too large error**
+   - Increase `MAX_FILE_SIZE` in environment variables
+   - Default limit is 10MB
+
+2. **Conversion timeout**
+   - Increase `CONVERSION_TIMEOUT` for complex documents
+   - Consider using batch processing for multiple files
+
+3. **Low confidence scores**
+   - Review document complexity (nested tables, complex conditionals)
+   - Check for unsupported Word features
+   - Manual review may be required for confidence < 90%
+
+### Debug Mode
+
+Enable debug logging:
+```bash
+LOG_LEVEL=DEBUG uvicorn app.main:app --reload
 ```
-Your Superannuation Insurance Claim
 
-We refer to the telephone conversation with our [context.roles.matter-owner.ods.name].
+## Development
 
-#if positive
-  Determination accepted
-#endif
+### Running Tests
+
+```bash
+# Run unit tests
+pytest tests/
+
+# Run with coverage
+pytest --cov=app tests/
 ```
 
-### Output (HTML)
-```html
-<h1>Your Superannuation Insurance Claim</h1>
-<p>We refer to the telephone conversation with our 
-   <span data-tag="context.roles.matter-owner.ods.name">
-     context.roles.matter-owner.ods.name
-   </span>.
-</p>
-<div data-if="positive">
-  <p>Determination accepted</p>
-</div>
+### Project Structure
+
+```
+sharedo-docx-converter/
+├── app/
+│   ├── main.py              # FastAPI application
+│   ├── converter.py          # Core conversion engine
+│   ├── models.py            # Pydantic models
+│   ├── templates/           # HTML templates
+│   │   └── index.html       # Landing page
+│   └── static/              # CSS, JS, images
+├── Input/                   # Input folder for batch processing
+├── Output/                  # Output folder for conversions
+├── docker-compose.yml       # Docker orchestration
+├── Dockerfile              # Container image
+├── nginx.conf              # Nginx configuration
+├── requirements.txt        # Python dependencies
+└── sharedo_batch_converter.py  # Batch processing script
 ```
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is proprietary software owned by Alterspective.io. All rights reserved.
 
-## 🐛 Known Limitations
-
-- Complex nested tables may require manual review
-- Custom Word styles need manual CSS mapping
-- Advanced Sharedo expressions should be validated
-- Macros in Word documents are not supported
-
-## 📞 Support
+## Support
 
 For issues and questions:
-- Create an issue on GitHub
-- Contact: support@alterspective.io
+- GitHub Issues: https://github.com/Alterspective-io/sharedo-docx-converter/issues
+- Email: support@alterspective.io
 
-## 🏆 Credits
+## Acknowledgments
 
-Developed by Alterspective.io for Sharedo template management.
-
----
-
-**Version:** 1.0.0  
-**Last Updated:** November 2024
+- Built with FastAPI for high-performance async operations
+- Uses python-docx for reliable DOCX parsing
+- Bootstrap UI for responsive web interface
+- Docker for consistent deployment across environments

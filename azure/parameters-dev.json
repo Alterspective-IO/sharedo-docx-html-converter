@@ -1,0 +1,78 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "appName": {
+      "value": "sharedo-docx-converter"
+    },
+    "environment": {
+      "value": "dev"
+    },
+    "location": {
+      "value": "australiaeast"
+    },
+    "acrName": {
+      "value": "docspectiveacr"
+    },
+    "acrResourceGroup": {
+      "value": "Docspective"
+    },
+    "createAcr": {
+      "value": false
+    },
+    "cpu": {
+      "value": "0.5"
+    },
+    "memory": {
+      "value": "1.0Gi"
+    },
+    "minReplicas": {
+      "value": 1
+    },
+    "maxReplicas": {
+      "value": 3
+    },
+    "logRetentionDays": {
+      "value": 30
+    },
+    "enableAppInsights": {
+      "value": true
+    },
+    "appEnv": {
+      "value": "development"
+    },
+    "debugMode": {
+      "value": "true"
+    },
+    "logLevel": {
+      "value": "DEBUG"
+    },
+    "maxFileSize": {
+      "value": "10485760"
+    },
+    "conversionTimeout": {
+      "value": "60"
+    },
+    "confidenceThreshold": {
+      "value": "90"
+    },
+    "apiKeyEnabled": {
+      "value": "false"
+    },
+    "enableRedis": {
+      "value": false
+    },
+    "metricsEnabled": {
+      "value": "true"
+    },
+    "rateLimitEnabled": {
+      "value": "true"
+    },
+    "rateLimitRequests": {
+      "value": "100"
+    },
+    "rateLimitPeriod": {
+      "value": "60"
+    }
+  }
+}

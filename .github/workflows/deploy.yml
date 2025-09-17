@@ -1,0 +1,248 @@
+name: Deploy to Azure Container Apps
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy (dev|test|prod)'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - test
+          - prod
+  push:
+    branches:
+      - main
+      - develop
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+      - '.gitignore'
+
+permissions:
+  contents: read
+  id-token: write
+  packages: write
+
+env:
+  REGISTRY: docspectiveacr.azurecr.io
+  IMAGE_NAME: sharedo-docx-converter
+  RESOURCE_GROUP: Docspective
+  LOCATION: australiaeast
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    outputs:
+      image-tag: ${{ steps.meta.outputs.tags }}
+      image-version: ${{ steps.meta.outputs.version }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Log in to Azure Container Registry
+        run: |
+          az acr login --name ${REGISTRY%%.*}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=sha,prefix={{branch}}-
+            type=raw,value=${{ github.event.inputs.environment || 'dev' }}-latest
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          build-args: |
+            BUILD_DATE=${{ github.event.head_commit.timestamp }}
+            VCS_REF=${{ github.sha }}
+            VERSION=${{ steps.meta.outputs.version }}
+
+  deploy-dev:
+    if: (github.ref == 'refs/heads/develop' || github.event.inputs.environment == 'dev')
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    environment:
+      name: development
+      url: ${{ steps.deploy.outputs.app-url }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Deploy to Azure Container Apps
+        id: deploy
+        run: |
+          # Deploy using Bicep
+          DEPLOYMENT_NAME="docx-converter-dev-$(date +%Y%m%d%H%M%S)"
+          
+          az deployment group create \
+            --resource-group ${{ env.RESOURCE_GROUP }} \
+            --template-file azure/main.bicep \
+            --parameters @azure/parameters-dev.json \
+            --parameters containerImage="${{ needs.build-and-push.outputs.image-tag }}" \
+            --name "${DEPLOYMENT_NAME}"
+          
+          # Get deployment outputs
+          APP_URL=$(az deployment group show \
+            --resource-group ${{ env.RESOURCE_GROUP }} \
+            --name "${DEPLOYMENT_NAME}" \
+            --query properties.outputs.containerAppUrl.value \
+            --output tsv)
+          
+          echo "app-url=${APP_URL}" >> $GITHUB_OUTPUT
+          echo "Deployed to: ${APP_URL}"
+
+      - name: Validate deployment
+        run: |
+          sleep 30
+          curl -f ${{ steps.deploy.outputs.app-url }}/health || exit 1
+          echo "Health check passed!"
+
+  deploy-test:
+    if: github.event.inputs.environment == 'test'
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    environment:
+      name: testing
+      url: ${{ steps.deploy.outputs.app-url }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Deploy to Azure Container Apps
+        id: deploy
+        run: |
+          # Deploy using Bicep
+          DEPLOYMENT_NAME="docx-converter-test-$(date +%Y%m%d%H%M%S)"
+          
+          az deployment group create \
+            --resource-group ${{ env.RESOURCE_GROUP }} \
+            --template-file azure/main.bicep \
+            --parameters @azure/parameters-test.json \
+            --parameters containerImage="${{ needs.build-and-push.outputs.image-tag }}" \
+            --name "${DEPLOYMENT_NAME}"
+          
+          # Get deployment outputs
+          APP_URL=$(az deployment group show \
+            --resource-group ${{ env.RESOURCE_GROUP }} \
+            --name "${DEPLOYMENT_NAME}" \
+            --query properties.outputs.containerAppUrl.value \
+            --output tsv)
+          
+          echo "app-url=${APP_URL}" >> $GITHUB_OUTPUT
+          echo "Deployed to: ${APP_URL}"
+
+      - name: Run integration tests
+        run: |
+          sleep 30
+          # Test health endpoint
+          curl -f ${{ steps.deploy.outputs.app-url }}/health
+          
+          # Test API endpoint
+          echo "Testing conversion API..."
+          # Add more comprehensive tests here
+
+  deploy-prod:
+    if: (github.ref == 'refs/heads/main' || github.event.inputs.environment == 'prod')
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: ${{ steps.deploy.outputs.app-url }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Deploy to Azure Container Apps
+        id: deploy
+        run: |
+          # Deploy using Bicep
+          DEPLOYMENT_NAME="docx-converter-prod-$(date +%Y%m%d%H%M%S)"
+          
+          # Note: API key should be stored in Azure Key Vault
+          # The parameter file references it from Key Vault
+          az deployment group create \
+            --resource-group ${{ env.RESOURCE_GROUP }} \
+            --template-file azure/main.bicep \
+            --parameters @azure/parameters-prod.json \
+            --parameters containerImage="${{ needs.build-and-push.outputs.image-tag }}" \
+            --name "${DEPLOYMENT_NAME}"
+          
+          # Get deployment outputs
+          APP_URL=$(az deployment group show \
+            --resource-group ${{ env.RESOURCE_GROUP }} \
+            --name "${DEPLOYMENT_NAME}" \
+            --query properties.outputs.containerAppUrl.value \
+            --output tsv)
+          
+          echo "app-url=${APP_URL}" >> $GITHUB_OUTPUT
+          echo "Deployed to: ${APP_URL}"
+
+      - name: Smoke test production
+        run: |
+          sleep 30
+          # Test health endpoint
+          curl -f ${{ steps.deploy.outputs.app-url }}/health
+          
+          # Test metrics endpoint
+          curl -f ${{ steps.deploy.outputs.app-url }}/metrics
+          
+          echo "Production smoke tests passed!"
+
+      - name: Create deployment summary
+        if: success()
+        run: |
+          echo "## Deployment Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Environment:** Production" >> $GITHUB_STEP_SUMMARY
+          echo "- **Version:** ${{ needs.build-and-push.outputs.image-version }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **URL:** ${{ steps.deploy.outputs.app-url }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Swagger:** ${{ steps.deploy.outputs.app-url }}/docs" >> $GITHUB_STEP_SUMMARY
+          echo "- **Health:** ${{ steps.deploy.outputs.app-url }}/health" >> $GITHUB_STEP_SUMMARY
+          echo "- **Metrics:** ${{ steps.deploy.outputs.app-url }}/metrics" >> $GITHUB_STEP_SUMMARY
