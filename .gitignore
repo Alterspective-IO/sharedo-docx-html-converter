@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project specific
+Input/*.docx
+Output/*.html
+Output/*.json
+!Output/.gitkeep
+!Input/.gitkeep
+
+# Temporary Word files
+~$*.docx
+~$*.doc
+
+# Test files
+test_*.html
+*.bak
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Documentation build
+docs/_build/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/

@@ -1,0 +1,132 @@
+{
+  "content_controls": [
+    {
+      "type": "content_control",
+      "tag": "atb-top-instruction",
+      "alias": "Sharedo ContentBlock: * ATB Top",
+      "text": "Sharedo ContentBlock: * ATB Top",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "context.roles.matter-owner.ods.name",
+      "alias": "Sharedo Tag: context.roles.matter-owner.ods.name",
+      "text": "Sharedo Tag: context.roles.matter-owner.ods.name",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "context.roles.superannuation-fund.ods.name",
+      "alias": "Sharedo Tag: context.roles.superannuation-fund.ods.name",
+      "text": "Sharedo Tag: context.roles.superannuation-fund.ods.name",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "document.questionnaire.dateDetermination!q?format=d+MMMM+yyyy",
+      "alias": "Sharedo Tag: document.questionnaire.dateDetermination!q?format=d+MMMM+yyyy",
+      "text": "Sharedo Tag:  document.questionnaire . dateDetermination!q ?format=d+MMMM+yyyy",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "document.questionnaire.aFCADetermination",
+      "alias": "Sharedo Tag: document.questionnaire.aFCADetermination",
+      "text": "Sharedo Tag:  document.questionnaire .aFCADetermination",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "context.roles.superannuation-fund.ods.name",
+      "alias": "Sharedo Tag: context.roles.superannuation-fund.ods.name",
+      "text": "Sharedo Tag: context.roles.superannuation-fund.ods.name",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "PositiveDeterm",
+      "alias": "Sharedo Section: PositiveDeterm",
+      "text": "W e consider AFCA\u2019s determination is  a fair , reasonable and  a just  outcome of your complaint. We confirm AFCA\u2019s determination is binding on all parties. If  Sharedo Tag: context.roles.superannuation-fund.ods.name  do not appeal AFCA\u2019s determination, your complaint will be resolved on the basis that   Sharedo Tag: context.roles.superannuation-fund.ods.name   Sharedo Tag:  document.questionnaire .aFCADetermination .",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "context.roles.superannuation-fund.ods.name",
+      "alias": "Sharedo Tag: context.roles.superannuation-fund.ods.name",
+      "text": "Sharedo Tag: context.roles.superannuation-fund.ods.name",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "context.roles.superannuation-fund.ods.name",
+      "alias": "Sharedo Tag: context.roles.superannuation-fund.ods.name",
+      "text": "Sharedo Tag: context.roles.superannuation-fund.ods.name",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "document.questionnaire.aFCADetermination",
+      "alias": "Sharedo Tag: document.questionnaire.aFCADetermination",
+      "text": "Sharedo Tag:  document.questionnaire .aFCADetermination",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "NegativeDeterm",
+      "alias": "Sharedo Section: NegativeDeterm",
+      "text": "We  do not recommend  appealing AFCA\u2019s determination or commencing court proceedings against  Sharedo Tag: context.roles.superannuation-fund.ods.name . We therefore recommend you accept AFCA\u2019s determination and not take any further action on this matter. If you do not agree with the above advice and wish to proceed with your matter, we encourage you to urgently obtain alternative legal representation. Arnold Thomas & Becker will not take any steps to protect your rights or interests. ",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "context.roles.superannuation-fund.ods.name",
+      "alias": "Sharedo Tag: context.roles.superannuation-fund.ods.name",
+      "text": "Sharedo Tag: context.roles.superannuation-fund.ods.name",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "CourtProceed",
+      "alias": "Sharedo Section: CourtProceed",
+      "text": "We consider AFCA\u2019s determination  is  an unfair, unreasonable and unjust outcome  of  your complaint. We confirm your complaint should be further challenged via court proceedings directly against  Sharedo Tag: context.roles.superannuation-fund.ods.name . You have  six (6) years  from the date of   Sharedo Tag: context.roles.superannuation-fund.ods.name   \u2019s  adverse decision to issue court proceedings.",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "context.roles.superannuation-fund.ods.name",
+      "alias": "Sharedo Tag: context.roles.superannuation-fund.ods.name",
+      "text": "Sharedo Tag: context.roles.superannuation-fund.ods.name",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "context.roles.superannuation-fund.ods.name",
+      "alias": "Sharedo Tag: context.roles.superannuation-fund.ods.name",
+      "text": "Sharedo Tag: context.roles.superannuation-fund.ods.name",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "document.questionnaire.dateReqBy!q?format=d+MMMM+yyyy",
+      "alias": "Sharedo Tag: document.questionnaire.dateReqBy!q?format=d+MMMM+yyyy",
+      "text": "Sharedo Tag:  document.questionnaire . dateReqBy!q ?format=d+MMMM+yyyy",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "atb-signoff-instruction",
+      "alias": "Sharedo ContentBlock: * ATB Signoff",
+      "text": "Sharedo ContentBlock: * ATB Signoff",
+      "placeholder": null
+    },
+    {
+      "type": "content_control",
+      "tag": "document.questionnaire.dateDetermination!q?format=d+MMMM+yyyy",
+      "alias": "Sharedo Tag: document.questionnaire.dateDetermination!q?format=d+MMMM+yyyy",
+      "text": "Sharedo Tag:  document.questionnaire . dateDetermination!q ?format=d+MMMM+yyyy",
+      "placeholder": null
+    }
+  ],
+  "merge_fields": [],
+  "custom_xml": []
+}

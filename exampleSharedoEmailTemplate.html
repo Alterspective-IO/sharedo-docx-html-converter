@@ -1,0 +1,77 @@
+<div data-content-block="email-header">
+    <p>* Email Header: Email header including Dear Sir/Madam</p>
+</div>
+<p>&nbsp;</p>
+<p>Matter Reference:&nbsp;<span data-tag="context.reference">context.reference</span></p>
+<p>Matter Title:&nbsp;<span data-tag="context.title">context.title</span></p>
+<p>&nbsp;</p>
+<p>Dear&nbsp;<span data-tag="context.roles.client.ods.person.firstName">context.roles.client.ods.person.firstName</span></p>
+<p>Thnak you for ypur instructions</p>
+<p>Please do not hesitate to contact me on :</p>
+<p>&nbsp;</p>
+<div data-foreach="context.children!q?path=task&amp;orderBy=createdDate">
+    <p>Task Name:&nbsp;<span data-tag="title">title</span></p>
+    <p>&nbsp;</p>
+    <div data-if="if (isNullOrEmpty(keyDates.kd-initial-instructions-confirmed.taskDueDate.date.utc.value.toString()))       
+Then false       
+Else dateAdd('y', 7 , keyDates.kd-initial-instructions-confirmed.taskDueDate.date.utc.value) &lt; now()">
+        <p>This only shows sometimes</p>
+    </div>
+</div>
+<p>&nbsp;</p>
+<p>Kind regards</p>
+<p><span data-tag="document.questionnaire.housing.name">document.questionnaire.housing.name</span></p>
+<p>&nbsp;</p>
+<p><span data-tag="document.questionnaire.pay_amount.value">document.questionnaire.pay_amount.value</span></p>
+<p>Calculated Field:</p>
+<p><span data-tag="context.children!q?path=task&amp;orderBy=createdDate">context.children!q?path=task&amp;orderBy=createdDate</span><br><br>&nbsp;</p>
+<figure class="table">
+    <table>
+        <tbody>
+            <tr>
+                <td>Col 1</td>
+                <td>Col 2</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+<p>&nbsp;</p>
+<p><span data-tag="document.activity.roles.creator.ods.name">document.activity.roles.creator.ods.name</span></p>
+<p><span data-tag="context.createdDate.utc.value!q?format=dd/MM/yyyy">context.createdDate.utc.value!q?format=dd/MM/yyyy</span></p>
+<p>&nbsp;</p>
+<div data-if="context.createdDate.utc.value &lt; '10 June 2021'">
+    <p>The old funding rules apply</p>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Here is a list of Witnesses:</p>
+<p>&nbsp;</p>
+<div data-foreach="context.roles.witness">
+    <p><span data-tag="ods.name">ods.name</span>,&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<figure class="table">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>DOB</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-foreach="context.roles.witness">
+                <td><span data-tag="ods.name">ods.name</span></td>
+                <td><span data-tag="ods.person.dateOfBirth">ods.person.dateOfBirth</span></td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
