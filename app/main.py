@@ -1,6 +1,7 @@
 """
-Sharedo DOCX to HTML Converter Service
-Main FastAPI application
+Alterspective DOCX to HTML Converter Service
+Enterprise-grade conversion for Sharedo email templates
+Powered by Alterspective Legal Technology
 """
 
 from fastapi import FastAPI, File, UploadFile, HTTPException, Request, BackgroundTasks
@@ -36,17 +37,17 @@ logger = logging.getLogger(__name__)
 
 # Initialize FastAPI app
 app = FastAPI(
-    title="Sharedo DOCX to HTML Converter",
-    description="Convert Word documents to Sharedo-compatible HTML email templates",
-    version="1.0.0",
+    title="Alterspective DOCX to HTML Converter",
+    description="Enterprise-grade service for converting Microsoft Word documents to Sharedo-compatible HTML email templates. Powered by Alterspective Legal Technology.",
+    version="2.0.0",
     contact={
-        "name": "Alterspective.io",
-        "url": "https://alterspective.io",
+        "name": "Alterspective Support",
+        "url": "https://alterspective.com.au",
         "email": "support@alterspective.io",
     },
     license_info={
-        "name": "MIT",
-        "url": "https://opensource.org/licenses/MIT",
+        "name": "Proprietary - Alterspective.io",
+        "url": "https://alterspective.com.au/license",
     }
 )
 
