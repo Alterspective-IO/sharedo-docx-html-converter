@@ -1,0 +1,214 @@
+================================================================================
+COMPREHENSIVE DOCX TO HTML CONVERSION TEST REPORT
+Generated: 2025-09-18 19:01:13
+API Endpoint: https://sharedo-docx-converter-dev.politeground-d6f68ba9.australiaeast.azurecontainerapps.io
+================================================================================
+
+OVERALL STATISTICS
+----------------------------------------
+Total Documents Tested: 18
+Successful Conversions: 18 (100.0%)
+Failed Conversions: 0
+Average Score: 8.41/10
+Overall Grade: B+
+
+RESULTS BY CATEGORY
+----------------------------------------
+
+SIMPLE DOCUMENTS (2 files)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Average Score: 6.53/10 (C)
+Average Conversion Time: 0.186s
+
+  • Igors Agreement.docx
+    Size: 11,964 bytes
+    Score: 6.53/10 (Grade: C)
+    Sharedo Elements: 0
+    Confidence: 90.0%
+    Processing: 0.010s
+
+  • Acme Supermarkets - Certification.docx
+    Size: 12,855 bytes
+    Score: 6.53/10 (Grade: C)
+    Sharedo Elements: 0
+    Confidence: 90.0%
+    Processing: 0.010s
+
+MODERATE DOCUMENTS (1 files)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Average Score: 9.10/10 (A+)
+Average Conversion Time: 0.264s
+
+  • Draft Agreement copy.docx
+    Size: 72,436 bytes
+    Score: 9.10/10 (Grade: A+)
+    Sharedo Elements: 19
+    Confidence: 95.0%
+    Processing: 0.030s
+
+COMPLEX DOCUMENTS (5 files)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Average Score: 7.63/10 (B)
+Average Conversion Time: 0.312s
+
+  • AdminOperation_Print_Task_Template.docx
+    Size: 50,516 bytes
+    Score: 7.26/10 (Grade: C+)
+    Sharedo Elements: 16
+    Confidence: 85.0%
+    Processing: 0.030s
+
+  • Completed Questioneer.docx
+    Size: 50,516 bytes
+    Score: 7.26/10 (Grade: C+)
+    Sharedo Elements: 16
+    Confidence: 85.0%
+    Processing: 0.040s
+
+  • 701_0048.docx
+    Size: 72,436 bytes
+    Score: 9.10/10 (Grade: A+)
+    Sharedo Elements: 19
+    Confidence: 95.0%
+    Processing: 0.030s
+
+  • Contract with ACME.docx
+    Size: 50,516 bytes
+    Score: 7.26/10 (Grade: C+)
+    Sharedo Elements: 16
+    Confidence: 85.0%
+    Processing: 0.030s
+
+  • Completed Questioneer - Copy (2).docx
+    Size: 50,516 bytes
+    Score: 7.26/10 (Grade: C+)
+    Sharedo Elements: 16
+    Confidence: 85.0%
+    Processing: 0.030s
+
+LARGE DOCUMENTS (10 files)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Average Score: 9.10/10 (A+)
+Average Conversion Time: 0.287s
+
+  • Signed Engagement Letter.docx
+    Size: 72,436 bytes
+    Score: 9.10/10 (Grade: A+)
+    Sharedo Elements: 19
+    Confidence: 95.0%
+    Processing: 0.030s
+
+  • Cost Estimate.docx
+    Size: 72,436 bytes
+    Score: 9.10/10 (Grade: A+)
+    Sharedo Elements: 19
+    Confidence: 95.0%
+    Processing: 0.030s
+
+  • Executed doucment from other side.docx
+    Size: 72,436 bytes
+    Score: 9.10/10 (Grade: A+)
+    Sharedo Elements: 19
+    Confidence: 95.0%
+    Processing: 0.030s
+
+  • Response to draft from other side.docx
+    Size: 72,436 bytes
+    Score: 9.10/10 (Grade: A+)
+    Sharedo Elements: 19
+    Confidence: 95.0%
+    Processing: 0.030s
+
+  • Generic Info.docx
+    Size: 72,436 bytes
+    Score: 9.10/10 (Grade: A+)
+    Sharedo Elements: 19
+    Confidence: 95.0%
+    Processing: 0.030s
+
+  • Response to draft from other side copy.docx
+    Size: 72,436 bytes
+    Score: 9.10/10 (Grade: A+)
+    Sharedo Elements: 19
+    Confidence: 95.0%
+    Processing: 0.030s
+
+  • Draft Agreement.docx
+    Size: 72,436 bytes
+    Score: 9.10/10 (Grade: A+)
+    Sharedo Elements: 19
+    Confidence: 95.0%
+    Processing: 0.030s
+
+  • iManage Conflict Results.docx
+    Size: 72,436 bytes
+    Score: 9.10/10 (Grade: A+)
+    Sharedo Elements: 19
+    Confidence: 95.0%
+    Processing: 0.030s
+
+  • Joan Medical Records.docx
+    Size: 72,436 bytes
+    Score: 9.10/10 (Grade: A+)
+    Sharedo Elements: 19
+    Confidence: 95.0%
+    Processing: 0.030s
+
+  • Signed Engagement Letter - Copy.docx
+    Size: 72,436 bytes
+    Score: 9.10/10 (Grade: A+)
+    Sharedo Elements: 19
+    Confidence: 95.0%
+    Processing: 0.030s
+
+================================================================================
+RUBRIC CATEGORY ANALYSIS
+----------------------------------------
+
+Tag Preservation (Weight: 25%)
+  Average Score: 6.76/10
+    - Preservation of context.* tags
+    - Preservation of document.* tags
+    - Preservation of env.* tags
+    - Preservation of content blocks
+    - Preservation of custom/other tags
+
+Structural Integrity (Weight: 20%)
+  Average Score: 8.78/10
+    - Paragraph structure maintained
+    - Table structure preserved
+    - List formatting retained
+    - Heading hierarchy preserved
+    - Document sections maintained
+
+Formatting Quality (Weight: 15%)
+  Average Score: 9.25/10
+    - Font styles preserved
+    - Line spacing and margins
+    - Text alignment maintained
+    - Bold, italic, underline preserved
+
+Special Elements (Weight: 20%)
+  Average Score: 8.61/10
+    - If/then blocks handled
+    - Placeholder preservation
+    - Date format expressions
+    - Nested property references
+
+Technical Quality (Weight: 20%)
+  Average Score: 9.24/10
+    - Valid HTML5 structure
+    - Email client compatibility
+    - Conversion speed
+    - Reasonable output size
+    - API confidence score
+
+================================================================================
+COMMON ISSUES IDENTIFIED
+----------------------------------------
+• No major systematic issues identified
+
+================================================================================
+RECOMMENDATIONS
+----------------------------------------
+• Service is performing well - minor improvements could enhance quality

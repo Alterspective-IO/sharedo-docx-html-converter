@@ -28,6 +28,9 @@ import asyncio
 sys.path.append(str(Path(__file__).parent.parent))
 from sharedo_batch_converter import SharedoBatchConverter
 
+# Import changelog route
+from .changelog_route import router as changelog_router
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -39,7 +42,7 @@ logger = logging.getLogger(__name__)
 app = FastAPI(
     title="Alterspective DOCX to HTML Converter",
     description="Enterprise-grade service for converting Microsoft Word documents to Sharedo-compatible HTML email templates. Powered by Alterspective Legal Technology.",
-    version="2.0.0",
+    version="3.0.0",
     contact={
         "name": "Alterspective Support",
         "url": "https://alterspective.com.au",
@@ -65,6 +68,9 @@ templates = Jinja2Templates(directory="app/templates")
 
 # Mount static files
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
+
+# Include changelog router
+app.include_router(changelog_router)
 
 # Thread pool for async conversions
 executor = ThreadPoolExecutor(max_workers=4)

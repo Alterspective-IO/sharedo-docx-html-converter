@@ -34,13 +34,15 @@ class SharedoBatchConverter:
         self.output_folder.mkdir(exist_ok=True)
         
         # Known Sharedo patterns for detection
+        # Note: We don't count generic placeholders [___] as Sharedo elements
+        # as they're common in regular forms/documents
         self.sharedo_patterns = {
             'content_control': re.compile(r'«([^»]+)»'),
-            'placeholder': re.compile(r'\[_+\]'),
             'context_var': re.compile(r'context\.[a-zA-Z0-9._!?&=]+'),
             'document_var': re.compile(r'document\.[a-zA-Z0-9._!?&=]+'),
             'conditional_marker': re.compile(r'#if|#foreach|#else|#endif'),
             'sharedo_tag': re.compile(r'Sharedo\s+(Tag|Section|ContentBlock):'),
+            # Removed generic placeholder pattern to avoid false positives
         }
     
     def process_all_documents(self):
@@ -206,11 +208,19 @@ class SharedoBatchConverter:
             full_text += text + " "
             
             # Check for patterns
-            if self.sharedo_patterns['placeholder'].search(text):
-                analysis["sharedo_elements"]["placeholders"].append(text[:50])
+            # Note: We no longer detect generic placeholders [___] to avoid false positives
             
             if self.sharedo_patterns['conditional_marker'].search(text):
                 analysis["sharedo_elements"]["conditionals"].append(text[:50])
+            
+            # Check for Sharedo-specific variables
+            if self.sharedo_patterns['context_var'].search(text):
+                if 'context.' not in str(analysis["sharedo_elements"]["tags"]):
+                    analysis["sharedo_elements"]["tags"].append(f"Context variable in: {text[:50]}")
+            
+            if self.sharedo_patterns['document_var'].search(text):
+                if 'document.' not in str(analysis["sharedo_elements"]["tags"]):
+                    analysis["sharedo_elements"]["tags"].append(f"Document variable in: {text[:50]}")
             
             # Check for custom styles
             if para.style and para.style.name not in ['Normal', 'Heading 1', 'Heading 2', 'Heading 3']:
@@ -235,9 +245,13 @@ class SharedoBatchConverter:
         warnings = []
         
         # Check for Sharedo elements
+        # Only count actual Sharedo-specific elements, not generic placeholders
         has_sharedo = (
             len(analysis["sharedo_elements"]["content_controls"]) > 0 or
-            len(analysis["sharedo_elements"]["placeholders"]) > 0
+            len(analysis["sharedo_elements"]["conditionals"]) > 0 or
+            len(analysis["sharedo_elements"]["tags"]) > 0 or
+            len(analysis["sharedo_elements"]["sections"]) > 0 or
+            len(analysis["sharedo_elements"]["content_blocks"]) > 0
         )
         
         if not has_sharedo:

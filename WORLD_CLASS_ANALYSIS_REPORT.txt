@@ -1,0 +1,113 @@
+====================================================================================================
+WORLD-CLASS DOCX TO HTML CONVERSION ANALYSIS REPORT
+====================================================================================================
+Analysis Date: 2025-09-18T19:50:42.356948
+Documents Analyzed: 50
+API Endpoint: https://sharedo-docx-converter-dev.politeground-d6f68ba9.australiaeast.azurecontainerapps.io
+
+EXECUTIVE SUMMARY
+--------------------------------------------------
+• Success Rate: 100.0%
+• Documents Reprocessed: 30
+• Average Score: 8.29/10
+• Overall Grade: B+
+
+GRADE DISTRIBUTION
+--------------------------------------------------
+A+ :   6 ( 12.0%) ██████
+A  :  22 ( 44.0%) ██████████████████████
+A- :   5 ( 10.0%) █████
+B+ :   2 (  4.0%) ██
+B  :   1 (  2.0%) █
+B- :   7 ( 14.0%) ███████
+C  :   1 (  2.0%) █
+C- :   1 (  2.0%) █
+D+ :   4 (  8.0%) ████
+F  :   1 (  2.0%) █
+
+PERFORMANCE BY DOCUMENT CATEGORY
+--------------------------------------------------
+
+GENERAL
+  Documents: 18
+  Average Score: 8.83/10
+  Grade: A-
+
+TEMPLATE
+  Documents: 32
+  Average Score: 7.98/10
+  Grade: B
+
+KEY LEARNING INSIGHTS
+--------------------------------------------------
+
+SUCCESS_PATTERNS
+  Documents with clear structure and standard Sharedo templates consistently score 9+
+  Common Strengths:
+    • Excellent content_fidelity (28 occurrences)
+    • Excellent content_controls (28 occurrences)
+    • Excellent technical_excellence (28 occurrences)
+    • Excellent sharedo_elements (27 occurrences)
+
+IMPROVEMENT_AREAS
+  Complex nested structures and non-standard formatting cause most issues
+  Most Common Issues:
+    • Content match only 0.0% (6 occurrences)
+
+TOP PERFORMING DOCUMENTS
+--------------------------------------------------
+• templates/Document Tag Test - Payments .docx
+  Score: 9.5/10 (Grade: A+)
+• templates/Sample for testing.docx
+  Score: 9.5/10 (Grade: A+)
+• templates/BN POC/BN - Letter to QBE Insurance (Australia) Li
+  Score: 9.5/10 (Grade: A+)
+• templates/BN POC/BN -  Letter acknowledging instructions QBE
+  Score: 9.5/10 (Grade: A+)
+• templates/BN POC/Cost Agreement reminder letter.docx
+  Score: 9.5/10 (Grade: A+)
+• templates/BN POC/Will (Standard).docx
+  Score: 9.5/10 (Grade: A+)
+• templates/61449 - Document Tags Test - Payments .docx
+  Score: 9.3/10 (Grade: A)
+• templates/61449 - Document Tags Test - Payments -BEN-LAPTOP.
+  Score: 9.3/10 (Grade: A)
+• templates/BN POC/Costs Agreement letter and Terms.docx
+  Score: 9.3/10 (Grade: A)
+• templates/Archive/61449 - Document Tags Test - Payments .doc
+  Score: 9.3/10 (Grade: A)
+
+DOCUMENTS REQUIRING IMPROVEMENT
+--------------------------------------------------
+• templates/Branch_Content_Block_UK.docx
+  Score: 5.15/10 (Grade: D+)
+  Issues: Content match only 0.0%
+• templates/Blank Template - Styles.docx
+  Score: 5.0/10 (Grade: D+)
+  Issues: Content match only 0.0%
+• templates/Letter_Using_CB_3.docx
+  Score: 5.8/10 (Grade: C-)
+  Issues: Content match only 0.0%
+• templates/Test Letter Using One CB.docx
+  Score: 6.3/10 (Grade: C)
+  Issues: Content match only 0.0%
+• templates/BN POC/BN - Substantive advice QBE Insurance (Aust
+  Score: 3.25/10 (Grade: F)
+• templates/Archive/LetterFooter-BEN-LAPTOP.docx
+  Score: 5.15/10 (Grade: D+)
+  Issues: Content match only 0.0%
+• templates/Archive/SampleFooter-BEN-LAPTOP.docx
+  Score: 5.15/10 (Grade: D+)
+  Issues: Content match only 0.0%
+
+STRATEGIC RECOMMENDATIONS
+--------------------------------------------------
+1. High reprocessing rate indicates initial conversion quality issues. Review and optimize primary conversion algorithm.
+2. Leverage successful patterns from template, general categories to improve other document types.
+
+TECHNICAL METRICS
+--------------------------------------------------
+
+====================================================================================================
+END OF REPORT
+====================================================================================================

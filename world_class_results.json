@@ -1,0 +1,2194 @@
+{
+  "timestamp": "2025-09-18T19:50:42.356948",
+  "total_processed": 50,
+  "successful": 50,
+  "failed": 0,
+  "reprocessed": 30,
+  "by_grade": {
+    "A-": 5,
+    "A": 22,
+    "B-": 7,
+    "B": 1,
+    "D+": 4,
+    "B+": 2,
+    "A+": 6,
+    "C-": 1,
+    "C": 1,
+    "F": 1
+  },
+  "by_category": {
+    "general": {
+      "count": 18,
+      "avg_score": 8.827777777777778
+    },
+    "template": {
+      "count": 32,
+      "avg_score": 7.9796875
+    }
+  },
+  "learning_insights": [
+    {
+      "type": "success_patterns",
+      "insight": "Documents with clear structure and standard Sharedo templates consistently score 9+",
+      "categories": [
+        "general",
+        "template"
+      ],
+      "common_strengths": [
+        [
+          "Excellent content_fidelity",
+          28
+        ],
+        [
+          "Excellent content_controls",
+          28
+        ],
+        [
+          "Excellent technical_excellence",
+          28
+        ],
+        [
+          "Excellent sharedo_elements",
+          27
+        ]
+      ]
+    },
+    {
+      "type": "improvement_areas",
+      "insight": "Complex nested structures and non-standard formatting cause most issues",
+      "categories": [
+        "template"
+      ],
+      "common_issues": [
+        [
+          "Content match only 0.0%",
+          6
+        ]
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "path": "Igors Agreement.docx",
+      "category": "general",
+      "size": 11964,
+      "attempts": 1,
+      "final_score": 8.6,
+      "grade": "A-",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 7,
+          "weight": 0.25,
+          "weighted": 1.75
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 9,
+          "weight": 0.15,
+          "weighted": 1.3499999999999999
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 0
+    },
+    {
+      "path": "Signed Engagement Letter.docx",
+      "category": "general",
+      "size": 72436,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 14
+    },
+    {
+      "path": "Cost Estimate.docx",
+      "category": "general",
+      "size": 72436,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 14
+    },
+    {
+      "path": "Draft Agreement copy.docx",
+      "category": "general",
+      "size": 72436,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 14
+    },
+    {
+      "path": "Executed doucment from other side.docx",
+      "category": "general",
+      "size": 72436,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 14
+    },
+    {
+      "path": "AdminOperation_Print_Task_Template.docx",
+      "category": "template",
+      "size": 50516,
+      "attempts": 3,
+      "final_score": 7.35,
+      "grade": "B-",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 2,
+          "weight": 0.2,
+          "weighted": 0.4
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        }
+      },
+      "issues": [
+        "Content match only 0.0%"
+      ],
+      "sharedo_elements_count": 16
+    },
+    {
+      "path": "Response to draft from other side.docx",
+      "category": "general",
+      "size": 72436,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 14
+    },
+    {
+      "path": "Completed Questioneer.docx",
+      "category": "general",
+      "size": 50516,
+      "attempts": 3,
+      "final_score": 7.35,
+      "grade": "B-",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 2,
+          "weight": 0.2,
+          "weighted": 0.4
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        }
+      },
+      "issues": [
+        "Content match only 0.0%"
+      ],
+      "sharedo_elements_count": 16
+    },
+    {
+      "path": "Acme Supermarkets - Certification.docx",
+      "category": "general",
+      "size": 12855,
+      "attempts": 3,
+      "final_score": 8.0,
+      "grade": "B",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 7,
+          "weight": 0.25,
+          "weighted": 1.75
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 6,
+          "weight": 0.15,
+          "weighted": 0.8999999999999999
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 9,
+          "weight": 0.15,
+          "weighted": 1.3499999999999999
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 0
+    },
+    {
+      "path": "Generic Info.docx",
+      "category": "general",
+      "size": 72436,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 14
+    },
+    {
+      "path": "Response to draft from other side copy.docx",
+      "category": "general",
+      "size": 72436,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 14
+    },
+    {
+      "path": "Draft Agreement.docx",
+      "category": "general",
+      "size": 72436,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 14
+    },
+    {
+      "path": "iManage Conflict Results.docx",
+      "category": "general",
+      "size": 72436,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 14
+    },
+    {
+      "path": "Joan Medical Records.docx",
+      "category": "general",
+      "size": 72436,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 14
+    },
+    {
+      "path": "701_0048.docx",
+      "category": "general",
+      "size": 72436,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 14
+    },
+    {
+      "path": "Signed Engagement Letter - Copy.docx",
+      "category": "general",
+      "size": 72436,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 14
+    },
+    {
+      "path": "Contract with ACME.docx",
+      "category": "general",
+      "size": 50516,
+      "attempts": 3,
+      "final_score": 7.35,
+      "grade": "B-",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 2,
+          "weight": 0.2,
+          "weighted": 0.4
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        }
+      },
+      "issues": [
+        "Content match only 0.0%"
+      ],
+      "sharedo_elements_count": 16
+    },
+    {
+      "path": "Completed Questioneer - Copy (2).docx",
+      "category": "general",
+      "size": 50516,
+      "attempts": 3,
+      "final_score": 7.35,
+      "grade": "B-",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 2,
+          "weight": 0.2,
+          "weighted": 0.4
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        }
+      },
+      "issues": [
+        "Content match only 0.0%"
+      ],
+      "sharedo_elements_count": 16
+    },
+    {
+      "path": "Disclosures/2023 Bank Statements.docx",
+      "category": "general",
+      "size": 72436,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 14
+    },
+    {
+      "path": "templates/Branch_Content_Block_UK.docx",
+      "category": "template",
+      "size": 265757,
+      "attempts": 3,
+      "final_score": 5.15,
+      "grade": "D+",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 2,
+          "weight": 0.2,
+          "weighted": 0.4
+        },
+        "sharedo_elements": {
+          "score": 2,
+          "weight": 0.25,
+          "weighted": 0.5
+        },
+        "structural_integrity": {
+          "score": 4,
+          "weight": 0.15,
+          "weighted": 0.6
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 9,
+          "weight": 0.15,
+          "weighted": 1.3499999999999999
+        }
+      },
+      "issues": [
+        "Content match only 0.0%"
+      ],
+      "sharedo_elements_count": 0
+    },
+    {
+      "path": "templates/Matter - ALL - Top and Tail.docx",
+      "category": "template",
+      "size": 39155,
+      "attempts": 1,
+      "final_score": 8.0,
+      "grade": "B+",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 4,
+          "weight": 0.25,
+          "weighted": 1.0
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 2
+    },
+    {
+      "path": "templates/Letter Template Address Blocl.docx",
+      "category": "template",
+      "size": 33576,
+      "attempts": 3,
+      "final_score": 7.3,
+      "grade": "B-",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 2,
+          "weight": 0.2,
+          "weighted": 0.4
+        },
+        "sharedo_elements": {
+          "score": 10,
+          "weight": 0.25,
+          "weighted": 2.5
+        },
+        "structural_integrity": {
+          "score": 4,
+          "weight": 0.15,
+          "weighted": 0.6
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [
+        "Content match only 0.0%"
+      ],
+      "sharedo_elements_count": 13
+    },
+    {
+      "path": "templates/61449 - Document Tags Test - Payments .docx",
+      "category": "template",
+      "size": 49333,
+      "attempts": 1,
+      "final_score": 9.3,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 9,
+          "weight": 0.2,
+          "weighted": 1.8
+        },
+        "sharedo_elements": {
+          "score": 10,
+          "weight": 0.25,
+          "weighted": 2.5
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 40
+    },
+    {
+      "path": "templates/Document Tag Test - Payments .docx",
+      "category": "template",
+      "size": 49179,
+      "attempts": 1,
+      "final_score": 9.5,
+      "grade": "A+",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 10,
+          "weight": 0.25,
+          "weighted": 2.5
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 40
+    },
+    {
+      "path": "templates/Branch_Address_2.docx",
+      "category": "template",
+      "size": 23388,
+      "attempts": 3,
+      "final_score": 7.35,
+      "grade": "B-",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 2,
+          "weight": 0.25,
+          "weighted": 0.5
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 9,
+          "weight": 0.15,
+          "weighted": 1.3499999999999999
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 0
+    },
+    {
+      "path": "templates/Blank Template - Styles.docx",
+      "category": "template",
+      "size": 48361,
+      "attempts": 3,
+      "final_score": 5.0,
+      "grade": "D+",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 2,
+          "weight": 0.2,
+          "weighted": 0.4
+        },
+        "sharedo_elements": {
+          "score": 2,
+          "weight": 0.25,
+          "weighted": 0.5
+        },
+        "structural_integrity": {
+          "score": 4,
+          "weight": 0.15,
+          "weighted": 0.6
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        }
+      },
+      "issues": [
+        "Content match only 0.0%"
+      ],
+      "sharedo_elements_count": 0
+    },
+    {
+      "path": "templates/61449 - Document Tags Test - Payments -BEN-LAPTOP.docx",
+      "category": "template",
+      "size": 49333,
+      "attempts": 1,
+      "final_score": 9.3,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 9,
+          "weight": 0.2,
+          "weighted": 1.8
+        },
+        "sharedo_elements": {
+          "score": 10,
+          "weight": 0.25,
+          "weighted": 2.5
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 40
+    },
+    {
+      "path": "templates/Feedback Response.docx",
+      "category": "template",
+      "size": 38348,
+      "attempts": 1,
+      "final_score": 8.0,
+      "grade": "B+",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 4,
+          "weight": 0.25,
+          "weighted": 1.0
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 2
+    },
+    {
+      "path": "templates/Sample for testing.docx",
+      "category": "template",
+      "size": 279686,
+      "attempts": 1,
+      "final_score": 9.5,
+      "grade": "A+",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 10,
+          "weight": 0.25,
+          "weighted": 2.5
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 34
+    },
+    {
+      "path": "templates/Sample.docx",
+      "category": "template",
+      "size": 42570,
+      "attempts": 1,
+      "final_score": 9.0,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 8,
+          "weight": 0.25,
+          "weighted": 2.0
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 10
+    },
+    {
+      "path": "templates/Letter_Using_CB_3.docx",
+      "category": "template",
+      "size": 271924,
+      "attempts": 3,
+      "final_score": 5.8,
+      "grade": "C-",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 2,
+          "weight": 0.2,
+          "weighted": 0.4
+        },
+        "sharedo_elements": {
+          "score": 4,
+          "weight": 0.25,
+          "weighted": 1.0
+        },
+        "structural_integrity": {
+          "score": 4,
+          "weight": 0.15,
+          "weighted": 0.6
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [
+        "Content match only 0.0%"
+      ],
+      "sharedo_elements_count": 2
+    },
+    {
+      "path": "templates/Test Letter Using One CB.docx",
+      "category": "template",
+      "size": 271620,
+      "attempts": 3,
+      "final_score": 6.3,
+      "grade": "C",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 2,
+          "weight": 0.2,
+          "weighted": 0.4
+        },
+        "sharedo_elements": {
+          "score": 6,
+          "weight": 0.25,
+          "weighted": 1.5
+        },
+        "structural_integrity": {
+          "score": 4,
+          "weight": 0.15,
+          "weighted": 0.6
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [
+        "Content match only 0.0%"
+      ],
+      "sharedo_elements_count": 3
+    },
+    {
+      "path": "templates/BN POC/Updated Advice.docx",
+      "category": "template",
+      "size": 74066,
+      "attempts": 1,
+      "final_score": 8.8,
+      "grade": "A-",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 9,
+          "weight": 0.2,
+          "weighted": 1.8
+        },
+        "sharedo_elements": {
+          "score": 8,
+          "weight": 0.25,
+          "weighted": 2.0
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 8
+    },
+    {
+      "path": "templates/BN POC/BN3 - WORK 30 - Letter to Solicitors advising we act.docx",
+      "category": "template",
+      "size": 64416,
+      "attempts": 1,
+      "final_score": 8.75,
+      "grade": "A-",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 7,
+          "weight": 0.25,
+          "weighted": 1.75
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 7
+    },
+    {
+      "path": "templates/BN POC/BN - Letter to QBE Insurance (Australia) Limited enclosing resolution plan.docx",
+      "category": "template",
+      "size": 65429,
+      "attempts": 1,
+      "final_score": 9.5,
+      "grade": "A+",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 10,
+          "weight": 0.25,
+          "weighted": 2.5
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 31
+    },
+    {
+      "path": "templates/BN POC/BN - Letter to solicitors - section 278 compliance response.docx",
+      "category": "template",
+      "size": 71198,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 7
+    },
+    {
+      "path": "templates/BN POC/Costs Agreement letter and Terms.docx",
+      "category": "template",
+      "size": 85720,
+      "attempts": 1,
+      "final_score": 9.3,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 9,
+          "weight": 0.2,
+          "weighted": 1.8
+        },
+        "sharedo_elements": {
+          "score": 10,
+          "weight": 0.25,
+          "weighted": 2.5
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 30
+    },
+    {
+      "path": "templates/BN POC/BN -  Letter acknowledging instructions QBE Insurance (Australia) Limited.docx",
+      "category": "template",
+      "size": 59832,
+      "attempts": 1,
+      "final_score": 9.5,
+      "grade": "A+",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 10,
+          "weight": 0.25,
+          "weighted": 2.5
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 37
+    },
+    {
+      "path": "templates/BN POC/WORK-14 - Initial letter to client acknowledging instructions.docx",
+      "category": "template",
+      "size": 73599,
+      "attempts": 1,
+      "final_score": 9.05,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 9,
+          "weight": 0.2,
+          "weighted": 1.8
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 13
+    },
+    {
+      "path": "templates/BN POC/BN - WORK 12 - Initial Advice.docx",
+      "category": "template",
+      "size": 74272,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 13
+    },
+    {
+      "path": "templates/BN POC/Cost Agreement reminder letter.docx",
+      "category": "template",
+      "size": 69857,
+      "attempts": 1,
+      "final_score": 9.5,
+      "grade": "A+",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 10,
+          "weight": 0.25,
+          "weighted": 2.5
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 20
+    },
+    {
+      "path": "templates/BN POC/BN - QBE Resolution Plan.docx",
+      "category": "template",
+      "size": 59870,
+      "attempts": 1,
+      "final_score": 9.25,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 9,
+          "weight": 0.25,
+          "weighted": 2.25
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 16
+    },
+    {
+      "path": "templates/BN POC/Will (Standard).docx",
+      "category": "template",
+      "size": 417366,
+      "attempts": 1,
+      "final_score": 9.5,
+      "grade": "A+",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 10,
+          "weight": 0.25,
+          "weighted": 2.5
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 20
+    },
+    {
+      "path": "templates/BN POC/BN - Substantive advice QBE Insurance (Australia) Limited.docx",
+      "category": "template",
+      "size": 83218,
+      "attempts": 3,
+      "final_score": 3.25,
+      "grade": "F",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 2,
+          "weight": 0.2,
+          "weighted": 0.4
+        },
+        "sharedo_elements": {
+          "score": 2,
+          "weight": 0.25,
+          "weighted": 0.5
+        },
+        "structural_integrity": {
+          "score": 1,
+          "weight": 0.15,
+          "weighted": 0.15
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 1,
+          "weight": 0.1,
+          "weighted": 0.1
+        },
+        "technical_excellence": {
+          "score": 4,
+          "weight": 0.15,
+          "weighted": 0.6
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 0
+    },
+    {
+      "path": "templates/Proceedings/Defence - Builder - RTA.docx",
+      "category": "template",
+      "size": 37213,
+      "attempts": 1,
+      "final_score": 8.5,
+      "grade": "A-",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 6,
+          "weight": 0.25,
+          "weighted": 1.5
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 6
+    },
+    {
+      "path": "templates/Proceedings/Application to Court.docx",
+      "category": "template",
+      "size": 39311,
+      "attempts": 3,
+      "final_score": 7.0,
+      "grade": "B-",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 9,
+          "weight": 0.2,
+          "weighted": 1.8
+        },
+        "sharedo_elements": {
+          "score": 2,
+          "weight": 0.25,
+          "weighted": 0.5
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 0
+    },
+    {
+      "path": "templates/Proceedings/Defence - Blank.docx",
+      "category": "template",
+      "size": 37213,
+      "attempts": 1,
+      "final_score": 8.5,
+      "grade": "A-",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 10,
+          "weight": 0.2,
+          "weighted": 2.0
+        },
+        "sharedo_elements": {
+          "score": 6,
+          "weight": 0.25,
+          "weighted": 1.5
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 6
+    },
+    {
+      "path": "templates/Archive/61449 - Document Tags Test - Payments .docx",
+      "category": "template",
+      "size": 49333,
+      "attempts": 1,
+      "final_score": 9.3,
+      "grade": "A",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 9,
+          "weight": 0.2,
+          "weighted": 1.8
+        },
+        "sharedo_elements": {
+          "score": 10,
+          "weight": 0.25,
+          "weighted": 2.5
+        },
+        "structural_integrity": {
+          "score": 8,
+          "weight": 0.15,
+          "weighted": 1.2
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        }
+      },
+      "issues": [],
+      "sharedo_elements_count": 40
+    },
+    {
+      "path": "templates/Archive/LetterFooter-BEN-LAPTOP.docx",
+      "category": "template",
+      "size": 34305,
+      "attempts": 3,
+      "final_score": 5.15,
+      "grade": "D+",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 2,
+          "weight": 0.2,
+          "weighted": 0.4
+        },
+        "sharedo_elements": {
+          "score": 2,
+          "weight": 0.25,
+          "weighted": 0.5
+        },
+        "structural_integrity": {
+          "score": 4,
+          "weight": 0.15,
+          "weighted": 0.6
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 9,
+          "weight": 0.15,
+          "weighted": 1.3499999999999999
+        }
+      },
+      "issues": [
+        "Content match only 0.0%"
+      ],
+      "sharedo_elements_count": 0
+    },
+    {
+      "path": "templates/Archive/SampleFooter-BEN-LAPTOP.docx",
+      "category": "template",
+      "size": 325030,
+      "attempts": 3,
+      "final_score": 5.15,
+      "grade": "D+",
+      "category_scores": {
+        "content_fidelity": {
+          "score": 2,
+          "weight": 0.2,
+          "weighted": 0.4
+        },
+        "sharedo_elements": {
+          "score": 2,
+          "weight": 0.25,
+          "weighted": 0.5
+        },
+        "structural_integrity": {
+          "score": 4,
+          "weight": 0.15,
+          "weighted": 0.6
+        },
+        "content_controls": {
+          "score": 10,
+          "weight": 0.15,
+          "weighted": 1.5
+        },
+        "formatting_quality": {
+          "score": 8,
+          "weight": 0.1,
+          "weighted": 0.8
+        },
+        "technical_excellence": {
+          "score": 9,
+          "weight": 0.15,
+          "weighted": 1.3499999999999999
+        }
+      },
+      "issues": [
+        "Content match only 0.0%"
+      ],
+      "sharedo_elements_count": 0
+    }
+  ]
+}
